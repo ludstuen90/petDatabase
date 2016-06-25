@@ -1,0 +1,39 @@
+.list {
+  padding:20px 15px 20px 15px;
+  background-color:lightgrey;
+}
+
+.list li {
+  display:inline;
+  padding:0 20px 0 20px;
+  text-transform: uppercase;
+}
+
+.list li:hover{
+  font-weight:bold;
+
+}
+
+
+
+/*.list {
+  width:100%;
+}
+.list li{
+  display:table-cell;
+  margin: 0 5px
+  display:block;
+}*/
+
+
+
+/*ul {
+  list-style-type:none;
+  marign: 0;
+  padding:0;
+}
+
+ul.list li {
+  display: inline;
+  width:100%;
+}*/

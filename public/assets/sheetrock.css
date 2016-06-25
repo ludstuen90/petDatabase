@@ -11,9 +11,23 @@
 
 .list li:hover{
   font-weight:bold;
-
 }
 
+.jumbotron{
+  background-image: url('/assets/corgi.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  height:700px;
+}
+
+.jumbotron h1 {
+  color:white;
+}
+
+
+.intro {
+  margin:0 10% 0 10%;
+}
 
 
 /*.list {

@@ -14,7 +14,16 @@
     <h1>Welcome to the best website ever!</h1>
 
     <div ng-controller="petViews">
-
+      <table>
+        <tr ng-repeat="pet in allPets">
+          <td>{{pet.name}}</td>
+          <td>{{pet.animal_type}}</td>
+          <td>{{pet.age_years}}</td>
+          <td></td>
+          <td><img src="{{pet.img_url}}"></td>
+      </tr>
+    </table>
+</li>
     <button ng-click="showPets()">Show Pets</button>
 
   </body>

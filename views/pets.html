@@ -16,18 +16,17 @@
     <div ng-controller="petViews">
       <button ng-click="showPets()">Show Pets</button>
 <br><br>
-      <table>
+      <table width="80%">
         <tr>
-          <td>Pet Name</td>
-          <td>Animal Type</td>
-          <td>Age </td>
-          <td>Photo</td>
+          <td><b>Pet Name</b></td>
+          <td><b>Animal Type</b></td>
+          <td><b>Age</b></td>
+          <td><b>Photo</b></td>
         </tr>
         <tr ng-repeat="pet in allPets">
           <td>{{pet.name}}</td>
           <td>{{pet.animal_type}}</td>
           <td>{{pet.age_years}}</td>
-          <td></td>
           <td><img ng-src="{{pet.img_url}}"></td>
       </tr>
     </table>

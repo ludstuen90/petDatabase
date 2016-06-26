@@ -9,22 +9,29 @@
     <link rel="stylesheet" type="text/css" href="assets/sheetrock.css"></link>
 
   </head>
-  <body>
+<body onload="showPets()">
     <div ng-include="'partials/header.html'"></div>
-    <h1>Welcome to the best website ever!</h1>
+    <h1>Pet Viewer</h1>
 
     <div ng-controller="petViews">
+      <button ng-click="showPets()">Show Pets</button>
+<br><br>
       <table>
+        <tr>
+          <td>Pet Name</td>
+          <td>Animal Type</td>
+          <td>Age </td>
+          <td>Photo</td>
+        </tr>
         <tr ng-repeat="pet in allPets">
           <td>{{pet.name}}</td>
           <td>{{pet.animal_type}}</td>
           <td>{{pet.age_years}}</td>
           <td></td>
-          <td><img src="{{pet.img_url}}"></td>
+          <td><img ng-src="{{pet.img_url}}"></td>
       </tr>
     </table>
-</li>
-    <button ng-click="showPets()">Show Pets</button>
+
 
   </body>
 </html>

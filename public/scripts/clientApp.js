@@ -29,8 +29,6 @@ petApp.controller('petViews', ['$scope', '$http', function($scope, $http){
     // //       console.log($scope.petsArray);
     // };
     // $scope.addPets();
-
-
   });
 };
 

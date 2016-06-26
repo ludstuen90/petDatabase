@@ -1,6 +1,42 @@
 var petApp=angular.module('petApp', []);
 
 
+petApp.controller('addPet', ['$scope', '$http', function($scope, $http){
+
+  $scope.addPet = function(){
+
+      console.log("request received in Add Pet!");
+        console.log($scope.petNameIn);
+        console.log($scope.petAgeIn);
+        console.log($scope.petTypeIn);
+        console.log($scope.imgUrlIn);
+
+        var petAdd ={
+          name: $scope.petNameIn,
+          age: $scope.petAgeIn,
+          type: $scope.petTypeIn,
+          img_url: $scope.imgUrlIn
+        };
+      $http({
+        method: 'POST',
+        url: '/newPet',
+        data: petAdd
+      }).then(function successs(){
+        alert("Pet saved successfully!");
+      }, function error(){
+        alert("Sorry, pet not saved successfully.");
+      });
+
+      $scope.petNameIn = '';
+      $scope.petAgeIn ='';
+      $scope.petTypeIn='';
+      $scope.imgUrlIn = '';
+
+  };
+
+
+}]);
+
 
 petApp.controller('petViews', ['$scope', '$http', function($scope, $http){
   $scope.showPets = function(){

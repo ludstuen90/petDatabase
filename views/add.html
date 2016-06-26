@@ -11,8 +11,18 @@
   </head>
   <body>
     <div ng-include="'partials/header.html'"></div>
-    <h1>Welcome to the best website ever!</h1>
+    <h1>Add a pet</h1>
 
+<div ng-controller="addPet">
+    <p>Enter in the applicable information to below to add a pet to our
+      database.</p>
 
+      <input type="text" value ="" ng-model="petNameIn" placeholder="Pet Name"/>
+      <input type="text" value="" ng-model="petAgeIn" placeholder="Pet Age"/>
+      <input type="text" value="" ng-model="petTypeIn" placeholder="Pet Type"/>
+      <input type="text" value="" ng-model="imgUrlIn" placeholder="Pet Image URL"/>
+
+      <button type="button" ng-click="addPet()">Submit Animal</button>
+</div>
   </body>
 </html>

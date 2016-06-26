@@ -35,6 +35,32 @@ app.get('/About', function(req, res){
   res.sendFile( path.resolve('views/about.html'));
 });
 
+app.post('/newPet', function(req, res){
+  console.log("Request received at create pet!");
+  console.log("Request was:");
+  console.log(req.body);
+
+var newPet = new Pets( {
+  name: req.body.name,
+  animal_type: req.body.type,
+  age_years: req.body.age,
+  img_url: req.body.img_url
+});
+
+console.log("and we are about to send over: ");
+console.log(newPet);
+
+  newPet.save(function(err){
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('Pet saved successfully!');
+      res.sendStatus(200);
+    }
+  });
+
+});
+
 //Data path: Queries database, and sends all userSchema
 app.get('/seeAll', function(req, res){
   Pets.find({}, function(err, petsList){
